@@ -19,14 +19,15 @@ namespace Xlsx2Csv
 
     class Options
     {
-        [Value(0, Required = true, HelpText = "Input file to be processed.")]
+        [Value(0, Required = true, MetaName = "InputFile", HelpText = "Input file to be processed.")]
         public string InputFileName { get; set; }
 
-        [Value(1, Required = true, HelpText = "Worksheet name to be processed.")]
+        [Value(1, Required = true, MetaName = "Worksheet", HelpText = "Worksheet name to be processed.")]
         public string WorksheetName { get; set; }
 
-        [Value(2, Required = false, HelpText = "Output file to write data to.")]
+        [Value(2, Required = false, MetaName = "OutputFile", HelpText = "Output file to write data to.")]
         public string OutputFileName { get; set; }
+
 
         [Option("password", Required = false, HelpText = "Password for open xlsx file.")]
         public string Password { get; set; }
